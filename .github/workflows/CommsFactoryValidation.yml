@@ -16,4 +16,4 @@ jobs:
           python -m pip install --upgrade pip
           # add any dependencies here, e.g.:
       - name: Run Python script
-        run: python srd/.py
+        run: python src/envs/CommsFactory.py
