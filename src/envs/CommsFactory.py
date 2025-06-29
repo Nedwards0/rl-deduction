@@ -68,6 +68,6 @@ class comms_factory:
 
 
 if __name__ == "__main__":
-    commsfactory = CommsFactory(["P1","P2","P3"],["faction 1","faction 2","faction 3"])
+    commsfactory = comms_factory(["P1","P2","P3"],["faction 1","faction 2","faction 3"])
 
     v = commsfactory.sample_action()
