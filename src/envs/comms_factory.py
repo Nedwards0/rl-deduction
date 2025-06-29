@@ -16,7 +16,6 @@ class comms_factory:
         "I am Voting for {target}"
     ]
 
-
     def __init__(self, player_names, factions):
         """
         Initialize the comms_factory with player names and factions.
@@ -29,7 +28,6 @@ class comms_factory:
         self.factions = factions
         self.faction_count = len(factions)
         self.role_count = 12 #hard coding till roles are made
-
 
     def validate_comms_action(self, action):
         """
@@ -98,9 +96,7 @@ class comms_factory:
             "label_faction": l_faction,
         }
         return action
-
-
-
+    
 
 if __name__ == "__main__":
     """
