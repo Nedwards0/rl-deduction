@@ -32,8 +32,8 @@ class CommsFactory:
 
     def sample_action(self, policy=False):
 
-        if(policy):
-            pass
+        if policy:
+            return {}
         else:
             random_template =  random.choice(self.COMMS_TEMPLATES)
             print(random_template)
