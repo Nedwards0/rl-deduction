@@ -1,6 +1,6 @@
 import random
 
-class CommsFactory:
+class comms_factory:
 
     COMMS_TEMPLATES = [
         "No Info",
@@ -34,36 +34,35 @@ class CommsFactory:
 
         if policy:
             return {}
-        else:
-            random_template =  random.choice(self.COMMS_TEMPLATES)
-            print(random_template)
+        random_template =  random.choice(self.COMMS_TEMPLATES)
+        print(random_template)
 
-            l_faction = self.faction_count
-            l_role = self.role_count
-            t1 = self.player_count
-            t2 = self.player_count
+        l_faction = self.faction_count
+        l_role = self.role_count
+        t1 = self.player_count
+        t2 = self.player_count
 
 
-            if "faction" in random_template:
-                l_faction = random.randrange(self.faction_count)
-            if "role" in random_template:
-                l_role = random.randrange(self.role_count)
-            if "target" in random_template and "visit" not  in random_template:
-                t1  = random.choice(self.players)
-            if "target" in random_template and "visit" in random_template:
-                t1  = random.choice(self.players)
-                t2 = random.choice(self.players)
+        if "faction" in random_template:
+            l_faction = random.randrange(self.faction_count)
+        if "role" in random_template:
+            l_role = random.randrange(self.role_count)
+        if "target" in random_template and "visit" not  in random_template:
+            t1  = random.choice(self.players)
+        if "target" in random_template and "visit" in random_template:
+            t1  = random.choice(self.players)
+            t2 = random.choice(self.players)
 
-            template_index = self.COMMS_TEMPLATES.index(random_template)
+        template_index = self.COMMS_TEMPLATES.index(random_template)
 
-            action = {
-                "template": template_index,
-                "target1": t1,
-                "target2": t2,
-                "label_role": l_role,
-                "label_faction": l_faction,
-            }
-            return action
+        action = {
+            "template": template_index,
+            "target1": t1,
+            "target2": t2,
+            "label_role": l_role,
+            "label_faction": l_faction,
+        }
+        return action
 
 
 
