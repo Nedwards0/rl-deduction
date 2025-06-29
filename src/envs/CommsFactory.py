@@ -24,14 +24,14 @@ class CommsFactory:
     def validate_comms_action(self, action):
         pass
 
-    def template_to_string(self, comm_action, role=None, speaker_name=None):
+    def print_action(self, comm_action, role=None, speaker_name=None):
         pass
 
     def get_player_name(self):
         pass
 
     def sample_action(self, policy=False):
-        
+
         if(policy):
             pass
         else:
@@ -53,7 +53,7 @@ class CommsFactory:
             if "target" in random_template and "visit" in random_template:
                 t1  = random.choice(self.players)
                 t2 = random.choice(self.players)
-            
+
             template_index = self.COMMS_TEMPLATES.index(random_template)
 
             action = {
@@ -64,12 +64,11 @@ class CommsFactory:
                 "label_faction": l_faction,
             }
             return action
-    
 
-            
+
+
 
 if __name__ == "__main__":
     commsfactory = CommsFactory(["P1","P2","P3"],["faction 1","faction 2","faction 3"])
 
     v = commsfactory.sample_action()
-    print(v)
